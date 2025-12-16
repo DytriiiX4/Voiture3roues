@@ -15,27 +15,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //avant
-  digitalWrite(in1, 1);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 1);
-  digitalWrite(in4, 0);
-  delay(5000);
-  // freiné
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 0);
-  delay(5000);
-  //arrière
   digitalWrite(in1, 0);
   digitalWrite(in2, 1);
   digitalWrite(in3, 0);
   digitalWrite(in4, 1);
-  delay(5000);
-  //libre
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 0);
-  delay(5000);
 }
