@@ -41,16 +41,16 @@ void setup() {
 }
 
 void avancer()  {
-  digitalWrite(in1, 1);
-  digitalWrite(in2, 0);
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 1);
   digitalWrite(in3, 1);
   digitalWrite(in4, 0);
 
 }
 
 void reculer()  {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 1);
+  digitalWrite(in1, 1);
+  digitalWrite(in2, 0);
   digitalWrite(in3, 0);
   digitalWrite(in4, 1);
 }
@@ -58,15 +58,15 @@ void reculer()  {
 void droite()  {
   digitalWrite(in1, 0);
   digitalWrite(in2, 1);
-  digitalWrite(in3, 1);
-  digitalWrite(in4, 0);
+  digitalWrite(in3, 0);
+  digitalWrite(in4, 1);
 }
 
 void gauche()  {
   digitalWrite(in1, 1);
   digitalWrite(in2, 0);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 1);
+  digitalWrite(in3, 1);
+  digitalWrite(in4, 0);
 }
 
 void enableLeftRight(long yPos)  {
@@ -81,10 +81,10 @@ void enableLeftRight(long yPos)  {
 
 void enableForwardBackward(long xPos, long yPos)  {
   long absol = abs(516-xPos);
-  int leftWheelSpeed = (((absol*100)/825)+((yPos*100)/1650))+127;
-  int rightWheelSpeed =  (((absol*100)/825)+(((1023-yPos)*100)/1650))+127;
-  analogWrite(ena, leftWheelSpeed);
-  analogWrite(enb, rightWheelSpeed);
+  int leftWheelSpeed = (((absol*100)/412)+((yPos*100)/825));
+  int rightWheelSpeed =  (((absol*100)/412)+(((1023-yPos)*100)/825));
+  analogWrite(enb, leftWheelSpeed);
+  analogWrite(ena, rightWheelSpeed);
   // Serial.println(leftWheelSpeed);
   // Serial.println(rightWheelSpeed);
   // Serial.println(" ");
