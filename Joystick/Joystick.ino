@@ -19,8 +19,8 @@ void setup() {
 
 void enableForwardBackward(long xPos, long yPos) {
   long absol = abs(516 - xPos);
-  int leftWheelSpeed = (((absol * 100) / 412) + ((yPos * 100) / 825));
-  int rightWheelSpeed = (((absol * 100) / 412) + (((1023 - yPos) * 100) / 825));
+  int rightWheelSpeed = (((absol * 100) / 412) + ((yPos * 100) / 825));
+  int leftWheelSpeed = (((absol * 100) / 412) + (((1023 - yPos) * 100) / 825));
   sending += '.';
   sending += leftWheelSpeed;
   sending += '.';
