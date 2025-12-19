@@ -58,5 +58,5 @@ void loop() {
   sending += "\n";
   Serial.print(sending);
   sending = "";
-  delay(5000);
+  delay(100);
 }
